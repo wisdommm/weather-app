@@ -13,6 +13,16 @@ function App() {
 
   useEffect(async () => {
     requestWeather();
+    // catch
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/src/serviceWorker.js', {scope: '/src/'})
+        .then(function (registration) {
+          console.log(registration);
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    }
   }, []);
 
   const requestWeather = async () => {
