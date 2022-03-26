@@ -11,8 +11,11 @@ function App() {
   const [dayRes, setDayRes] = useState([]);
   const [page, setPage] = useState(1);
 
-  useEffect(async () => {
-    requestWeather();
+  useEffect(() => {
+    const hourTemp = localStorage.getItem('hourList');
+    if (hourTemp) setHourRes(JSON.parse(hourTemp));
+    const weatherTemp = localStorage.getItem('weatherList');
+    if (weatherTemp) setDayRes(JSON.parse(weatherTemp));
     // catch
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./serviceWorker.js')
@@ -23,14 +26,10 @@ function App() {
           console.log(err);
         });
     }
+    requestWeather();
   }, []);
 
   const requestWeather = async () => {
-    // 缓存
-    const hourTemp = localStorage.getItem('hourList');
-    const weatherTemp = localStorage.getItem('weatherList');
-    if (hourTemp) setHourRes(JSON.parse(hourTemp));
-    if (weatherTemp) setDayRes(JSON.parse(weatherTemp));
     // 当前及24h数据
     const hour_result = await fetch('https://devapi.qweather.com/v7/weather/now?location=101210106&key=d822b681e139418ea3e02807da626ada').then(data => data.json());
     if (hour_result.code === '200') {
