@@ -26,6 +26,11 @@ function App() {
   }, []);
 
   const requestWeather = async () => {
+    // 缓存
+    const hourTemp = localStorage.getItem('hourList');
+    const weatherTemp = localStorage.getItem('weatherList');
+    hourTemp ? setHourRes(JSON.parse(hourTemp)) : null;
+    weatherTemp ? setDayRes(JSON.parse(weatherTemp)) : null;
     // 当前及24h数据
     const hour_result = await fetch('https://devapi.qweather.com/v7/weather/now?location=101210106&key=d822b681e139418ea3e02807da626ada').then(data => data.json());
     if (hour_result.code === '200') {
@@ -43,6 +48,7 @@ function App() {
           temp: Math.floor(temp)
         });
       });
+      localStorage.setItem('hourList', JSON.stringify(hourList));
       setHourRes(hourList);
     } else {
       throw new Error('request error');
@@ -61,6 +67,7 @@ function App() {
           fxDate,
         });
       });
+      localStorage.setItem('weatherList', JSON.stringify(weatherList));
       setDayRes(weatherList);
     } else {
       throw new Error('request error');

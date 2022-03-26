@@ -4,6 +4,8 @@ this.addEventListener('install', function (event) {
       caches.open('last').then(function (cache) {
         return cache.addAll([
           '/weather-test/',
+          '/weather-test/favicon.ico',
+          '/weather-test/manifest.json',
           '/weather-test/index.html',
           '/weather-test/static/js/main.2db67bc8.js',
           '/weather-test/static/css/main.e0ce3286.css',
