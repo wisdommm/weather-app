@@ -15,7 +15,7 @@ function App() {
     requestWeather();
     // catch
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/src/serviceWorker.js', {scope: '/src/'})
+      navigator.serviceWorker.register('./serviceWorker.js')
         .then(function (registration) {
           console.log(registration);
         })
