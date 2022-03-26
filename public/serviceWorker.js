@@ -18,7 +18,9 @@ this.addEventListener('install', function (event) {
           "/weather-test/static/js/main.7cd6d280.js.map",
           "/weather-test/static/js/787.13d76ca7.chunk.js.map",
           "/weather-test/static/css/main.e0ce3286.css",
-          "/weather-test/static/js/main.7cd6d280.js"
+          "/weather-test/static/js/main.7cd6d280.js",
+          "/weather-test/favicon.ico",
+          "/weather-test/manifest.json"
         ]);
       })
     );
