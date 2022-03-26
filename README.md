@@ -1,1 +1,1 @@
-weather example
+weather project
