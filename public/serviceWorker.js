@@ -3,11 +3,9 @@ this.addEventListener('install', function (event) {
     event.waitUntil(
       caches.open('last').then(function (cache) {
         return cache.addAll([
-          "/weather-test/",
           "/weather-test/favicon.ico",
           "/weather-test/manifest.json",
 
-          "/weather-test/static/css/main.e0ce3286.css",
           "/weather-test/static/js/main.839df8d1.js",
           "/weather-test/static/js/787.13d76ca7.chunk.js",
           "/weather-test/static/media/sun.2857d53e5fcc0124a24f.png",
@@ -21,7 +19,6 @@ this.addEventListener('install', function (event) {
           "/weather-test/static/js/main.839df8d1.js.map",
           "/weather-test/static/js/787.13d76ca7.chunk.js.map",
           "/weather-test/static/css/main.e0ce3286.css",
-          "/weather-test/static/js/main.839df8d1.js"
         ]);
       })
     );

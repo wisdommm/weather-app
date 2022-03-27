@@ -27,9 +27,9 @@ ul, li {
   background: #fff;
 }
 .weatherLogo {
-  width: 65vw;
-  height: 65vw;
-  margin-top: -42vw;
+  width: 55vw;
+  height: 55vw;
+  margin: -30vw 0 0 2vw;
 }
 .position {
   text-align: center;
@@ -122,15 +122,15 @@ ul, li {
   text-align: right;
   width: 18vw;
 }
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 550px) {
   .content {
     width: 400px;
     height: 400px;
   }
   .weatherLogo {
-    width: 429px;
-    height: 429px;
-    margin-top: -277px;
+    width: 380px;
+    height: 380px;
+    margin-top: -210px;
   }
   .position {
     font-size: 32px;
