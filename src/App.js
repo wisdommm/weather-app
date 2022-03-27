@@ -16,6 +16,8 @@ function App() {
     if (hourTemp) setHourRes(JSON.parse(hourTemp));
     const weatherTemp = localStorage.getItem('weatherList');
     if (weatherTemp) setDayRes(JSON.parse(weatherTemp));
+    const nowData = localStorage.getItem('nowData');
+    if(nowData) setNow(JSON.parse(nowData));
     console.log(hourTemp);
     console.log(weatherTemp);
     // catch
@@ -36,6 +38,7 @@ function App() {
     const hour_result = await fetch('https://devapi.qweather.com/v7/weather/now?location=101210106&key=d822b681e139418ea3e02807da626ada').then(data => data.json());
     if (hour_result.code === '200') {
       setNow(hour_result.now);
+      localStorage.setItem('nowData', JSON.stringify(hour_result.now));
       const hourList = Array(24).fill(hour_result.now).map((e, index) => {
         let temp;
         if (Math.random() < 0.5) {
