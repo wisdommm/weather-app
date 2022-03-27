@@ -7,7 +7,7 @@
           "/weather-test/manifest.json",
 
           "/weather-test/static/css/main.0f36e62e.css",
-          "/weather-test/static/js/main.048672a2.js",
+          "/weather-test/static/js/main.c1992069.js",
           "/weather-test/static/js/787.13d76ca7.chunk.js",
           "/weather-test/static/media/sun.2857d53e5fcc0124a24f.png",
           "/weather-test/static/media/snow.2147bcf6dd11a10ae469.png",
@@ -17,7 +17,7 @@
           "/weather-test/static/media/today.2af6c7195788cc85089d.png",
           "/weather-test/index.html",
           "/weather-test/static/css/main.0f36e62e.css.map",
-          "/weather-test/static/js/main.048672a2.js.map",
+          "/weather-test/static/js/main.c1992069.js.map",
           "/weather-test/static/js/787.13d76ca7.chunk.js.map"
         ]);
       })
