@@ -16,6 +16,8 @@ function App() {
     if (hourTemp) setHourRes(JSON.parse(hourTemp));
     const weatherTemp = localStorage.getItem('weatherList');
     if (weatherTemp) setDayRes(JSON.parse(weatherTemp));
+    console.log(hourTemp);
+    console.log(weatherTemp);
     // catch
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./serviceWorker.js')
