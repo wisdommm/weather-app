@@ -1,5 +1,5 @@
 
-this.addEventListener('install', function (event) {
+  this.addEventListener('install', function (event) {
     event.waitUntil(
       caches.open('last').then(function (cache) {
         return cache.addAll([
@@ -23,3 +23,11 @@ this.addEventListener('install', function (event) {
       })
     );
   });
+
+  this.addEventListener('fetch', function(event) {
+    event.respondWith(
+      caches.match(event.request)
+    );
+  });
+
+  
