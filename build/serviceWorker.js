@@ -7,7 +7,7 @@ this.addEventListener('install', function (event) {
           "/weather-test/manifest.json",
 
           "/weather-test/static/css/main.1af235ef.css",
-          "/weather-test/static/js/main.839df8d1.js",
+          "/weather-test/static/js/main.0b4ddcfd.js",
           "/weather-test/static/js/787.13d76ca7.chunk.js",
           "/weather-test/static/media/sun.2857d53e5fcc0124a24f.png",
           "/weather-test/static/media/snow.2147bcf6dd11a10ae469.png",
@@ -17,7 +17,7 @@ this.addEventListener('install', function (event) {
           "/weather-test/static/media/cloud.974591b65bdd465e882d.png",
           "/weather-test/index.html",
           "/weather-test/static/css/main.1af235ef.css.map",
-          "/weather-test/static/js/main.839df8d1.js.map",
+          "/weather-test/static/js/main.0b4ddcfd.js.map",
           "/weather-test/static/js/787.13d76ca7.chunk.js.map"
         ]);
       })
